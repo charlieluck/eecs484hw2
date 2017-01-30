@@ -1,3 +1,5 @@
+DROP VIEW Good_partner;
+
 DROP TABLE Member;
 
 DROP TABLE Enrolled;
