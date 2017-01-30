@@ -1,0 +1,27 @@
+((SELECT S.id 
+FROM STUDENT S, COURSE C, ENROLLED E
+WHERE S.sid = E.sid AND C.cid = E.cid AND C.title = 'EECS484')
+
+INTERSECT 
+
+SELECT S.id 
+FROM STUDENT S, COURSE C, ENROLLED E
+WHERE S.sid = E.sid AND C.cid = E.cid AND C.title = 'EECS485'))
+
+UNION
+
+((SELECT S.id 
+FROM STUDENT S, COURSE C, ENROLLED E
+WHERE S.sid = E.sid AND C.cid = E.cid AND C.title = 'EECS482')
+
+INTERSECT
+
+(SELECT S.id 
+FROM STUDENT S, COURSE C, ENROLLED E
+WHERE S.sid = E.sid AND C.cid = E.cid AND C.title = 'EECS486'))
+
+UNION
+
+(SELECT S.id 
+FROM STUDENT S, COURSE C, ENROLLED E
+WHERE S.sid = E.sid AND C.cid = E.cid AND C.title = 'EECS281');
