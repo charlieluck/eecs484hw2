@@ -40,6 +40,11 @@ INSERT INTO Student VALUES (7,'G','');
 INSERT INTO Student VALUES (8,'H','');
 INSERT INTO Student VALUES (9,'I','');
 INSERT INTO Student VALUES (10,'J','');
+INSERT INTO Student VALUES (11,'K','');
+INSERT INTO Student VALUES (12,'L','');
+INSERT INTO Student VALUES (13,'M','');
+
+
 
 INSERT INTO Course VALUES (280,'EECS280');
 INSERT INTO Course VALUES (281,'EECS281');
@@ -47,3 +52,37 @@ INSERT INTO Course VALUES (482,'EECS482');
 INSERT INTO Course VALUES (484,'EECS484');
 INSERT INTO Course VALUES (485,'EECS485');
 INSERT INTO Course VALUES (486,'EECS486');
+
+INSERT INTO Enrolled VALUES(1,482); --take one
+INSERT INTO Enrolled VALUES(1,486);
+
+INSERT INTO Enrolled VALUES(2,482); --take none
+
+INSERT INTO Enrolled VALUES(3,484); --take one
+INSERT INTO Enrolled VALUES(3,485);
+
+INSERT INTO Enrolled VALUES(4,482); --take none
+INSERT INTO Enrolled VALUES(4,484);
+INSERT INTO Enrolled VALUES(4,485);
+
+INSERT INTO Enrolled VALUES(5,281); --take one
+
+INSERT INTO Enrolled VALUES(6,484); --take none
+
+INSERT INTO Enrolled VALUES(7,484); --take none
+INSERT INTO Enrolled VALUES(7,486);
+
+INSERT INTO Enrolled VALUES(8,482); --take none
+INSERT INTO Enrolled VALUES(8,485);
+
+INSERT INTO Enrolled VALUES(9,281); --take two
+INSERT INTO Enrolled VALUES(9,482);
+INSERT INTO Enrolled VALUES(9,485);
+
+INSERT INTO Enrolled VALUES(10,281); --take three
+INSERT INTO Enrolled VALUES(10,482);
+INSERT INTO Enrolled VALUES(10,484);
+INSERT INTO Enrolled VALUES(10,485);
+INSERT INTO Enrolled VALUES(10,486);
+
+-- should return 1,3,5,9,10
