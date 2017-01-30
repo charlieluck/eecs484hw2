@@ -1,0 +1,5 @@
+DROP TABLE Student;
+DROP TABLE Project;
+DROP TABLE Course;
+DROP TABLE Meneber;
+DROP TABLE Enrolled;

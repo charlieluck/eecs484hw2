@@ -18,8 +18,8 @@ CREATE TABLE Member (
 		project_id integer NOT NULL,
 		student_id integer NOT NULL,
 		PRIMARY KEY (project_id,student_id),
-		FOREIGN KEY project_id REFERENCES Project(project_id),
-		FOREIGN KEY student_id REFERENCES Student(student_id)
+		FOREIGN KEY (project_id) REFERENCES Project(project_id),
+		FOREIGN KEY (student_id) REFERENCES Student(student_id)
 );
 
 CREATE TABLE Enrolled (
