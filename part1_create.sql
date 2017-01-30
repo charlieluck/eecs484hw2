@@ -85,4 +85,4 @@ INSERT INTO Enrolled VALUES(10,484);
 INSERT INTO Enrolled VALUES(10,485);
 INSERT INTO Enrolled VALUES(10,486);
 --take three
--- should return 1,3,5,9,10
+-- should return 1,3,4,5,9,10
