@@ -48,7 +48,7 @@ SELECT * FROM Candidate_author;
 
 SELECT B.title,E.publication,A.author_id, A.last_name, A.first_name
 FROM authors A, books B, editions E, Candidate_author C 
-WHERE A.author_id IN C AND B.author_id = A.author_id AND E.book_id = B.book_id;
+WHERE A.author_id IN C.author_id AND B.author_id = A.author_id AND E.book_id = B.book_id;
 
 DROP VIEW Candidate_author;
 
