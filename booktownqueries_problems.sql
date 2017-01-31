@@ -83,6 +83,10 @@ PROMPT Question 5.5;
 -- Find the book_id and its corresponding total stock available for all book editions ordered
 -- in descending order by the total stock. Name the column for total stock as TOTAL_STOCK. 
 -- NOTE: You do not need to consider editions of books that are not in the Stock Table.
+SELECT B.book_id, Sum(S.stock) AS TOTAL_STOCK
+FROM books B, editions E, Stock S
+WHERE B.book_id = E.book_id AND E.isbn = S.isbn
+GROUP BY B.book_id;
 
 
 -- Q6
