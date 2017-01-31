@@ -25,10 +25,21 @@ PROMPT Question 5.2;
 -- with the same name, one who has written a horror book and another
 -- who has written short stories. 
 
+<<<<<<< HEAD
 --SELECT A.last_name, A.first_name
 --FROM authors A, books B1, book B2, subjects S1, subjects S2 
 --WHERE A.author_id = B1.author_id AND B1.subject_id = S1.subject_id AND S1.subject_id = 'Horror' AND
 --	  A.author_id = B2.author_id AND B2.subject_id = S2.subject_id AND S2.subject_id = 'Short Story';
+=======
+SELECT A.last_name, A.first_name
+FROM authors A, books B,subjects S 
+WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id AND S.subject_id = 'Horror' 
+INTERSECT
+SELECT A.last_name, A.first_name
+FROM authors A, books B,subjects S
+WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id AND S.subject_id = 'Short Story';
+	  
+>>>>>>> bdae6ee130cd69d95ab50d62c86452db64a6f019
 
 
 -- Q3
@@ -59,7 +70,15 @@ DROP VIEW Candidate_author;
 PROMPT Question 5.4;
 -- Find id, first name, and last name of authors who wrote books for all the 
 -- subjects of books written by Edgar Allen Poe.
+CREATE VIEW Edgar_Allen AS
+SELECT authors A, books B, subjects S
+WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id AND 
 
+
+
+SELECT A1.author_id, A1.last_name, A1.first_name
+FROM authors A, books B, subjects S
+WHERE 
 
 -- Q5
 PROMPT Question 5.5;
