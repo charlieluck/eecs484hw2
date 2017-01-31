@@ -14,7 +14,7 @@ SELECT title FROM books;
 PROMPT Question 5.1;
 -- List the ISBN of all books written by "Tom Christiansen"
 
-SELECT E.isbn, A.last_name FROM editions E, authors A, books B
+SELECT E.isbn FROM editions E, authors A, books B
 WHERE A.author_id = B.author_id AND B.book_id = E.book_id
 AND A.last_name = 'Christiansen' AND A.first_name = 'Tom';
 
