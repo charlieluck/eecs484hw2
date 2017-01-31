@@ -1,4 +1,4 @@
-DROP VIEW Good_partner;
+--DROP VIEW Good_partner;
 
 DROP TABLE Member;
 

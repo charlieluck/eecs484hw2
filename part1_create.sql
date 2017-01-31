@@ -120,7 +120,7 @@ INSERT INTO Enrolled VALUES (10,484);
 INSERT INTO Enrolled VALUES (10,485);
 INSERT INTO Enrolled VALUES (10,486);
 --take three
--- q1 should return 1,3,4,5,9,10
+-- q1 should return 1,3,4,5,9,10,11
 
 INSERT INTO Enrolled VALUES (11,280); 
 INSERT INTO Enrolled VALUES (11,281); 
