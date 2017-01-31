@@ -44,7 +44,7 @@ SELECT A.author_id FROM authors A, books B, editions E
 WHERE A.author_id = B.author_id AND B.book_id = E.book_id
 AND E.publication > '1999-01-01' AND E.publication < '2001-10-01';
 
-SELECT * FROM VIEW 
+SELECT * FROM Candidate_author;
 
 SELECT DISTINCT B.title,E.publication,A.author_id, A.last_name, A.first_name
 FROM authors A, books B, editions E, Candidate_author C 
