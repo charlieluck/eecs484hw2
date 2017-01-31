@@ -46,7 +46,7 @@ AND E.publication > '1999-01-01' AND E.publication < '2001-10-01';
 
 SELECT * FROM Candidate_author;
 
-SELECT B2.title,E2.publication,A2.author_id, A2.last_name, A2.first_name
+SELECT * --B2.title,E2.publication,A2.author_id, A2.last_name, A2.first_name
 FROM authors A2, books B2, editions E2, Candidate_author C2 
 WHERE A2.author_id = C2.author_id AND B2.author_id = A2.author_id AND E2.book_id = B2.book_id;
 
