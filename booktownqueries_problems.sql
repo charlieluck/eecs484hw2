@@ -55,9 +55,9 @@ AND E.publication > '1999-01-01' AND E.publication < '2001-10-01';
 
 SELECT * FROM Candidate_author;
 
-SELECT B2.title,E2.publication,A2.author_id, A2.last_name, A2.first_name
-FROM authors A2, books B2, editions E2, Candidate_author C2 
-WHERE A2.author_id = 7806 AND B2.author_id = A2.author_id AND E2.book_id = B2.book_id;
+SELECT DISTINCT B.title,E.publication,A.author_id, A.last_name, A.first_name
+FROM authors A, books B, editions E, Candidate_author C
+WHERE A.author_id = C.author_id AND B.author_id = A.author_id AND E.book_id = B.book_id;
 
 DROP VIEW Candidate_author;
 
