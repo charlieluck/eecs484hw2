@@ -63,14 +63,16 @@ INSERT INTO Member VALUES (3,2);
 INSERT INTO Member VALUES (3,4);
 --Project3
 INSERT INTO Member VALUES (4,3);
-INSERT INTO Member VALUES (4,8);
+INSERT INTO Member VALUES (4,10);
 --Project4
-INSERT INTO Member VALUES (5,8);
+INSERT INTO Member VALUES (5,10);
 INSERT INTO Member VALUES (5,9);
 --Project5
-INSERT INTO Member VALUES (6,6);
+INSERT INTO Member VALUES (6,3);
 INSERT INTO Member VALUES (6,7);
 --Project6
+INSERT INTO Member VALUES (7,11);
+--Project7
 
 INSERT INTO Course VALUES (280,'EECS280');
 INSERT INTO Course VALUES (281,'EECS281');
@@ -103,7 +105,6 @@ INSERT INTO Enrolled VALUES (7,486);
 --take none
 INSERT INTO Enrolled VALUES (8,482); 
 INSERT INTO Enrolled VALUES (8,485);
---good partner
 --take none
 INSERT INTO Enrolled VALUES (9,280);
 INSERT INTO Enrolled VALUES (9,281); 
@@ -111,6 +112,7 @@ INSERT INTO Enrolled VALUES (9,482);
 INSERT INTO Enrolled VALUES (9,484);
 --take two
 --good partner
+INSERT INTO Enrolled VALUES (10,280); 
 INSERT INTO Enrolled VALUES (10,281); 
 INSERT INTO Enrolled VALUES (10,482);
 INSERT INTO Enrolled VALUES (10,483);
@@ -119,5 +121,14 @@ INSERT INTO Enrolled VALUES (10,485);
 INSERT INTO Enrolled VALUES (10,486);
 --take three
 -- q1 should return 1,3,4,5,9,10
---good partners are 4,8,9
--- q2 should return 2,3,8,9
+
+INSERT INTO Enrolled VALUES (11,280); 
+INSERT INTO Enrolled VALUES (11,281); 
+INSERT INTO Enrolled VALUES (11,482);
+INSERT INTO Enrolled VALUES (11,483);
+INSERT INTO Enrolled VALUES (11,484);
+INSERT INTO Enrolled VALUES (11,485);
+INSERT INTO Enrolled VALUES (11,486);
+
+--good partners are 4,9,10,11
+-- q2 should return 2,3,9,10
