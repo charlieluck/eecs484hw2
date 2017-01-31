@@ -27,11 +27,11 @@ PROMPT Question 5.2;
 
 SELECT A.last_name, A.first_name
 FROM authors A, books B,subjects S 
-WHERE A.author_id = B1.author_id AND B1.subject_id = 'Horror' 
+WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id AND S.subject_id= 'Horror' 
 INTERSECT
 SELECT A.last_name, A.first_name
-FROM authors A, books B,subjects S 
-WHERE A.author_id = B2.author_id AND B2.subject_id = 'Short Story';
+FROM authors A, books B,subjects S
+WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id AND S.subject_id= 'Short Story';
 	  
 
 
