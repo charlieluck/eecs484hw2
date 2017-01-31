@@ -40,13 +40,13 @@ PROMPT Question 5.3;
 -- Using a single query is likely to be more 
 -- efficient in practice. Moreover, there shouldn't be any duplication for the returned records.
 CREATE VIEW Candidate_author AS 
-SELECT A.author_id FROM authors A, books B, editions E
+SELECT DISTINCT A.author_id FROM authors A, books B, editions E
 WHERE A.author_id = B.author_id AND B.book_id = E.book_id
 AND E.publication > '1999-01-01' AND E.publication < '2001-10-01';
 
 SELECT * FROM Candidate_author;
 
-SELECT DISTINCT B.title,E.publication,A.author_id, A.last_name, A.first_name
+SELECT B.title,E.publication,A.author_id, A.last_name, A.first_name
 FROM authors A, books B, editions E, Candidate_author C 
 WHERE E.book_id = B.book_id AND B.author_id = A.author_id AND A.author_id = C.author_id;
 
