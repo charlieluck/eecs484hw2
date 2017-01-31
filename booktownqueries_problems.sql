@@ -28,7 +28,7 @@ PROMPT Question 5.2;
 SELECT A.last_name, A.first_name
 FROM authors A, books B1, book B2, subjects S1, subjects S2 
 WHERE A.author_id = B1.author_id AND B1.subject_id = S1.subject_id AND S1.subject_id = 'Horror' AND
-	  A.author_id = B2.author_id AND B2.subject_id = S2.subject_id AND S2.subject_id = 'Short Story'
+	  A.author_id = B2.author_id AND B2.subject_id = S2.subject_id AND S2.subject_id = 'Short Story';
 
 
 -- Q3
@@ -39,7 +39,10 @@ PROMPT Question 5.3;
 -- the publication requirements. You can also use views. But DROP any views at the end of your query.
 -- Using a single query is likely to be more 
 -- efficient in practice. Moreover, there shouldn't be any duplication for the returned records.
-
+CREATE VIEW Candidate_author AS 
+SELECT A.aid FROM authors A, books B, editions E
+WHERE A.author_id = B.author_id AND B.book_id = E.book_id
+AND 
 
 -- Q4
 PROMPT Question 5.4;
