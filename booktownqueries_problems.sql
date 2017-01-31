@@ -25,10 +25,10 @@ PROMPT Question 5.2;
 -- with the same name, one who has written a horror book and another
 -- who has written short stories. 
 
-SELECT A.last_name, A.first_name
-FROM authors A, books B1, book B2, subjects S1, subjects S2 
-WHERE A.author_id = B1.author_id AND B1.subject_id = S1.subject_id AND S1.subject_id = 'Horror' AND
-	  A.author_id = B2.author_id AND B2.subject_id = S2.subject_id AND S2.subject_id = 'Short Story';
+--SELECT A.last_name, A.first_name
+--FROM authors A, books B1, book B2, subjects S1, subjects S2 
+--WHERE A.author_id = B1.author_id AND B1.subject_id = S1.subject_id AND S1.subject_id = 'Horror' AND
+--	  A.author_id = B2.author_id AND B2.subject_id = S2.subject_id AND S2.subject_id = 'Short Story';
 
 
 -- Q3
