@@ -52,6 +52,9 @@ WHERE A.author_id IN C.author_id AND B.author_id = A.author_id AND E.book_id = B
 
 DROP VIEW Candidate_author;
 
+SELECT B.title FROM Books B authors A
+WHERE A.author_id = B.author_id AND A.last_name = 'Christiansen' AND A.first_name = 'Tom';
+
 -- Q4
 PROMPT Question 5.4;
 -- Find id, first name, and last name of authors who wrote books for all the 
