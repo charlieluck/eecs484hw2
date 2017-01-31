@@ -2,7 +2,7 @@ CREATE VIEW STUDENT_NUM AS
 SELECT COUNT (*) 
 FROM STUDENT S, ENROLLED E, COURSE C
 WHERE S.sid = E.sid AND E.cid = C.cid AND S.major <> 'CS';
-
+-- students without any major ?
 
 CREATE VIEW NON_HEAVILY_CS_COURSE AS
 SELECT *
