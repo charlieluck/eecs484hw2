@@ -55,23 +55,23 @@ INSERT INTO Project VALUES (8,'P8');
 INSERT INTO Project VALUES (9,'P9');
 INSERT INTO Project VALUES (10,'P10');
 
-INSERT INTO Member VALUES (1,1);
+--INSERT INTO Member VALUES (1,1);
 --Project1
-INSERT INTO Member VALUES (2,2);
+--INSERT INTO Member VALUES (2,2);
 --Project2 
-INSERT INTO Member VALUES (3,2);
-INSERT INTO Member VALUES (3,4);
+--INSERT INTO Member VALUES (3,2);
+--INSERT INTO Member VALUES (3,4);
 --Project3
-INSERT INTO Member VALUES (4,3);
-INSERT INTO Member VALUES (4,10);
+--INSERT INTO Member VALUES (4,3);
+--INSERT INTO Member VALUES (4,10);
 --Project4
-INSERT INTO Member VALUES (5,10);
-INSERT INTO Member VALUES (5,9);
+--INSERT INTO Member VALUES (5,10);
+--INSERT INTO Member VALUES (5,9);
 --Project5
-INSERT INTO Member VALUES (6,3);
-INSERT INTO Member VALUES (6,7);
+--INSERT INTO Member VALUES (6,3);
+--INSERT INTO Member VALUES (6,7);
 --Project6
-INSERT INTO Member VALUES (7,11);
+--INSERT INTO Member VALUES (7,11);
 --Project7
 
 INSERT INTO Course VALUES (280,'EECS280');
@@ -130,5 +130,16 @@ INSERT INTO Enrolled VALUES (11,484);
 INSERT INTO Enrolled VALUES (11,485);
 INSERT INTO Enrolled VALUES (11,486);
 
+
 --good partners are 4,9,10,11
 -- q2 should return 2,3,9,10
+
+INSERT INTO Member VALUES (1,2);
+INSERT INTO Member VALUES (1,10);
+INSERT INTO Member VALUES (2,3);
+INSERT INTO Member VALUES (3,4);
+-- q4 student 2,4,8,9,10 takes 482
+-- 2,4 in different project, 8 no project, 9 no project, 2,10 in same project
+-- student 3,5,6 doesn't take same course as 2
+-- 2,3 in different project, 5 no project, 6 no project
+--q4 should return (2,4) (2,8) (8,9) ...
