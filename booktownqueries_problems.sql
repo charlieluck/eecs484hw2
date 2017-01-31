@@ -25,7 +25,6 @@ PROMPT Question 5.2;
 -- with the same name, one who has written a horror book and another
 -- who has written short stories. 
 
-<<<<<<< HEAD
 --SELECT A.last_name, A.first_name
 --FROM authors A, books B1, book B2, subjects S1, subjects S2 
 --WHERE A.author_id = B1.author_id AND B1.subject_id = S1.subject_id AND S1.subject_id = 'Horror' AND
@@ -38,8 +37,7 @@ INTERSECT
 SELECT A.last_name, A.first_name
 FROM authors A, books B,subjects S
 WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id AND S.subject_id = 'Short Story';
-	  
->>>>>>> bdae6ee130cd69d95ab50d62c86452db64a6f019
+
 
 
 -- Q3
