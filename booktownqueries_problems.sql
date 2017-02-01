@@ -117,6 +117,6 @@ PROMPT Question 5.8;
 --MINUS 
 SELECT A.author_id 
 FROM authors A, books B1, books B2
-WHERE A.author_id = B1.author_id AND A.author_id = B2.author_id AND B1.book_id<>B2.book_id;
+WHERE A.author_id = B1.author_id AND A.author_id = B2.author_id AND B1.book_id<B2.book_id;
 
 
