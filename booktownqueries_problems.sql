@@ -16,7 +16,7 @@ PROMPT Question 5.1;
 
 SELECT E.isbn FROM editions E, authors A, books B
 WHERE A.author_id = B.author_id AND B.book_id = E.book_id
-AND A.last_name = 'Poe' AND A.first_name = 'Edgar Allen';
+AND A.last_name = 'Christiansen' AND A.first_name = 'Tom';
 
 -- Q2
 PROMPT Question 5.2;
