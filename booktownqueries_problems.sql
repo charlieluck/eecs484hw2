@@ -102,9 +102,9 @@ PROMPT Question 5.7;
 -- Name the last name column as l_name, the first name column as f_name.
 SELECT A.last_name AS l_name , A.first_name AS f_name
 FROM authors A 
-WHERE A.aid NOT IN 
-( SELECT A.aid FROM authors A, books B 
-  WHERE A.aid = B.aid 
+WHERE A.author_id NOT IN 
+( SELECT A.author_id FROM authors A, books B 
+  WHERE A.author_id = B.author_id 
 );
 
 -- Q8
