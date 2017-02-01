@@ -70,20 +70,31 @@ DROP VIEW Candidate_author;
 PROMPT Question 5.4;
 -- Find id, first name, and last name of authors who wrote books for all the 
 -- subjects of books written by Edgar Allen Poe.
-CREATE VIEW Edgar_Allen AS
-SELECT authors A, books B, subjects S
-WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id AND 
 
+--CREATE VIEW Edgar_Allen AS
+--SELECT authors A, books B, subjects S
+--WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id AND 
 
+--SELECT A1.author_id, A1.last_name, A1.first_name
+--FROM authors A, books B, subjects S
+--WHERE 
 
-SELECT A1.author_id, A1.last_name, A1.first_name
-FROM authors A, books B, subjects S
-WHERE 
+SELECT A.author_id, A.last_name, A.first_name
+FROM authors A
+WHERE NOT EXIST (
+SELECT DISTINCT S.subject_id 
+FROM subjects S, books B, authors A 
+WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id
+AND A.last_name = 'Poe' AND A.first_name = 'Edgar Allen'
+MINUS 
+SELECT DISTINCT S.subject_id 
+FROM subjects S, books B, authors A 
+WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id
+);
 
 -- Q5
 PROMPT Question 5.5;
 -- Find the book_id and its corresponding total stock available for all book editions ordered
--- in descending order by the total stock. Name the column for total stock as TOTAL_STOCK. 
 -- NOTE: You do not need to consider editions of books that are not in the Stock Table.
 
 SELECT B.book_id, Sum(S.stock) AS TOTAL_STOCK
