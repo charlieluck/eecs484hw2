@@ -116,7 +116,7 @@ SELECT B.author_id
 FROM books B
 MINUS 
 SELECT A.author_id 
-FROM Author A, books B1, books B2
+FROM authors A, books B1, books B2
 WHERE A.author_id = B1.author_id AND A.author_id = B2.author_id;
 
 
