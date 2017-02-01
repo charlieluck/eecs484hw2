@@ -86,7 +86,8 @@ PROMPT Question 5.5;
 SELECT B.book_id, Sum(S.stock) AS TOTAL_STOCK
 FROM books B, editions E, Stock S
 WHERE B.book_id = E.book_id AND E.isbn = S.isbn
-GROUP BY B.book_id;
+GROUP BY B.book_id
+ORDER BY TOTAL_STOCK DESC;
 
 
 -- Q6
