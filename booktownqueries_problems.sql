@@ -104,7 +104,7 @@ SELECT * FROM Multibook_author;
 
 SELECT DISTINCT P.name, P.publisher_id 
 FROM publishers P, editions E, books B, Multibook_author M
-WHERE P.publisher_id = E.publisher_id AND E.book_id = B.book_id AND B.author_id IN M.author_id;
+WHERE P.publisher_id = E.publisher_id AND E.book_id = B.book_id AND B.author_id IN M.author_id
 ORDER BY publisher_id DESC;
 
 DROP VIEW Multibook_author;
