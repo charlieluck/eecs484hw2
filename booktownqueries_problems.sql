@@ -25,7 +25,7 @@ PROMPT Question 5.2;
 -- with the same name, one who has written a horror book and another
 -- who has written short stories. 
 
-SELECT A.last_name, A.first_name, B1.book_id, B2.book_id
+SELECT A.last_name, A.first_name --, B1.book_id, B2.book_id
 FROM authors A, books B1, books B2, subjects S1, subjects S2 
 WHERE A.author_id = B1.author_id AND B1.subject_id = S1.subject_id AND S1.subject = 'Horror' 
 AND A.author_id = B2.author_id AND B2.subject_id = S2.subject_id AND S2.subject = 'Short Story';
@@ -38,6 +38,8 @@ AND A.author_id = B2.author_id AND B2.subject_id = S2.subject_id AND S2.subject 
 --FROM authors A, books B,subjects S
 --WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id AND S.subject = 'Short Story';
 
+-- COMMENT: THIS LATTER ONE IS INCORRECT FOR FAILING TO CONSIDER
+--          TWO DIFFERENT AUTHORS WITH THE SAME NAME.
 
 -- Q3
 PROMPT Question 5.3;
