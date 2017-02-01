@@ -100,7 +100,12 @@ PROMPT Question 5.6;
 PROMPT Question 5.7;
 -- Find the last name and first name of authors who haven't written any book.
 -- Name the last name column as l_name, the first name column as f_name.
-
+SELECT A.last_name AS l_name , A.first_name AS f_name
+FROM authors A 
+WHERE A.aid NOT IN 
+( SELECT A.aid FROM authors A, books B 
+  WHERE A.aid = B.aid 
+);
 
 -- Q8
 PROMPT Question 5.8;
