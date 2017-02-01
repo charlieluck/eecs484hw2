@@ -98,7 +98,7 @@ CREATE VIEW Multibook_author As
 SELECT B.author_id 
 FROM books B 
 GROUP BY B.author_id
-HAVING COUNT(*) = 2;
+HAVING COUNT(*) = 1;
 
 SELECT * FROM Multibook_author;
 
