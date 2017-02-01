@@ -112,11 +112,11 @@ PROMPT Question 5.8;
 -- Find author_id of authors who have written exactly 1 book. Name the author_id column as aid. 
 -- Order the id in ascending order. 
 
-SELECT DISTINCT B.author_id 
-FROM books B
+--SELECT DISTINCT B.author_id 
+--FROM books B
 --MINUS 
---SELECT A.author_id 
---FROM authors A, books B1, books B2
---WHERE A.author_id = B1.author_id AND A.author_id = B2.author_id;
+SELECT A.author_id 
+FROM authors A, books B1, books B2
+WHERE A.author_id = B1.author_id AND A.author_id = B2.author_id;
 
 
