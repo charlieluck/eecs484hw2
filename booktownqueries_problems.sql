@@ -82,10 +82,10 @@ PROMPT Question 5.4;
 SELECT A.author_id, A.last_name, A.first_name
 FROM authors A
 WHERE NOT EXISTS(
-SELECT DISTINCT S.subject_id 
-FROM subjects S, books B, authors A 
-WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id
-AND A.last_name = 'Poe' AND A.first_name = 'Edgar Allen'
+SELECT DISTINCT S1.subject_id 
+FROM subjects S1, books B1, authors A1 
+WHERE A1.author_id = B1.author_id AND B1.subject_id = S1.subject_id
+AND A1.last_name = 'Poe' AND A1.first_name = 'Edgar Allen'
 MINUS 
 SELECT DISTINCT S.subject_id 
 FROM subjects S, books B, authors A 
