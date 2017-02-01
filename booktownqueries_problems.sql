@@ -87,9 +87,9 @@ FROM subjects S1, books B1, authors A1
 WHERE A1.author_id = B1.author_id AND B1.subject_id = S1.subject_id
 AND A1.last_name = 'Poe' AND A1.first_name = 'Edgar Allen'
 MINUS 
-SELECT DISTINCT S.subject_id 
-FROM subjects S, books B, authors A 
-WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id
+SELECT DISTINCT S2.subject_id 
+FROM subjects S2, books B2, authors A2 
+WHERE A2.author_id = B2.author_id AND B2.subject_id = S2.subject_id AND A2.author_id = A.author_id
 );
 
 -- Q5
