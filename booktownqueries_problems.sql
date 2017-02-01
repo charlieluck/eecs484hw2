@@ -98,9 +98,13 @@ CREATE VIEW Multibook_author As
 SELECT B.author_id 
 FROM books B 
 GROUP BY B.author_id
-HAVING COUNT(*) = 1;
+HAVING COUNT(*) = 2;
 
 SELECT * FROM Multibook_author;
+
+SELECT P.name, P.publisher_id 
+FROM publishers P, editions E, books B, Multibook_author M
+WHERE P.publisher_id = E.publisher_id AND E.book_id = B.book_id AND B.author_id IN M;
 
 DROP VIEW Multibook_author;
 -- Q7
