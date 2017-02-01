@@ -48,6 +48,7 @@ PROMPT Question 5.3;
 -- the publication requirements. You can also use views. But DROP any views at the end of your query.
 -- Using a single query is likely to be more 
 -- efficient in practice. Moreover, there shouldn't be any duplication for the returned records.
+
 CREATE VIEW Candidate_author AS 
 SELECT DISTINCT A.author_id FROM authors A, books B, editions E
 WHERE A.author_id = B.author_id AND B.book_id = E.book_id
@@ -83,17 +84,18 @@ PROMPT Question 5.5;
 -- Find the book_id and its corresponding total stock available for all book editions ordered
 -- in descending order by the total stock. Name the column for total stock as TOTAL_STOCK. 
 -- NOTE: You do not need to consider editions of books that are not in the Stock Table.
+
 SELECT B.book_id, Sum(S.stock) AS TOTAL_STOCK
 FROM books B, editions E, Stock S
 WHERE B.book_id = E.book_id AND E.isbn = S.isbn
 GROUP BY B.book_id
 ORDER BY TOTAL_STOCK DESC;
 
-
 -- Q6
 PROMPT Question 5.6;
 -- Find the name and id of all publishers who have published books for authors
 -- who have written exactly 2 books. Result should be ordered by publisher id in descending order;
+
 CREATE VIEW Multibook_author As 
 SELECT B.author_id 
 FROM books B 
@@ -108,10 +110,12 @@ WHERE P.publisher_id = E.publisher_id AND E.book_id = B.book_id AND B.author_id 
 ORDER BY publisher_id DESC;
 
 DROP VIEW Multibook_author;
+
 -- Q7
 PROMPT Question 5.7;
 -- Find the last name and first name of authors who haven't written any book.
 -- Name the last name column as l_name, the first name column as f_name.
+
 SELECT A.last_name AS l_name , A.first_name AS f_name
 FROM authors A 
 WHERE A.author_id NOT IN 
