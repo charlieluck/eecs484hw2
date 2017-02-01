@@ -94,8 +94,15 @@ ORDER BY TOTAL_STOCK DESC;
 PROMPT Question 5.6;
 -- Find the name and id of all publishers who have published books for authors
 -- who have written exactly 2 books. Result should be ordered by publisher id in descending order;
+CREATE VIEW Multibook_author As 
+SELECT B.author_id 
+FROM books B 
+GROUP BY B.author_id
+HAVING COUNT(*) = 2;
 
+SELECT * FROM Multibook_author;
 
+DROP VIEW Multibook_author;
 -- Q7
 PROMPT Question 5.7;
 -- Find the last name and first name of authors who haven't written any book.
