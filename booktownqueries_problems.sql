@@ -28,8 +28,8 @@ PROMPT Question 5.2;
 --SELECT A.last_name, A.first_name
 --FROM authors A, books B1, book B2, subjects S1, subjects S2 
 --WHERE A.author_id = B1.author_id AND B1.subject_id = S1.subject_id AND S1.subject_id = 'Horror' AND
---	  A.author_id = B2.author_id AND B2.subject_id = S2.subject_id AND S2.subject_id = 'Short Story';
-=======
+--A.author_id = B2.author_id AND B2.subject_id = S2.subject_id AND S2.subject_id = 'Short Story';
+
 SELECT A.last_name, A.first_name
 FROM authors A, books B,subjects S 
 WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id AND S.subject_id = 'Horror' 
@@ -100,7 +100,7 @@ FROM books B
 GROUP BY B.author_id
 HAVING COUNT(*) = 2;
 
-SELECT * FROM Multibook_author;
+--SELECT * FROM Multibook_author;
 
 SELECT DISTINCT P.name, P.publisher_id 
 FROM publishers P, editions E, books B, Multibook_author M
