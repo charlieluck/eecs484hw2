@@ -131,8 +131,8 @@ PROMPT Question 5.7;
 SELECT A.last_name AS l_name , A.first_name AS f_name
 FROM authors A 
 WHERE A.author_id NOT IN 
-( SELECT A.author_id FROM authors A, books B 
-  WHERE A.author_id = B.author_id 
+( SELECT A1.author_id FROM authors A1, books B 
+  WHERE A1.author_id = B.author_id 
 );
 
 -- Q8
