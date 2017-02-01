@@ -81,7 +81,7 @@ PROMPT Question 5.4;
 
 SELECT A.author_id, A.last_name, A.first_name
 FROM authors A
-WHERE NOT EXIST (
+WHERE NOT EXISTS(
 SELECT DISTINCT S.subject_id 
 FROM subjects S, books B, authors A 
 WHERE A.author_id = B.author_id AND B.subject_id = S.subject_id
