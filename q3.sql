@@ -25,7 +25,7 @@ FROM Student S1, Enrolled E1
 WHERE S1.sid = E.sid AND S.major = 'CS'
 )
 GROUP BY E.cid
-HAVING COUNT(*) > 1;
+HAVING COUNT(*) > 2;
 
 SELECT * FROM Non_heavy_cs_course;
 
