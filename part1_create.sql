@@ -41,8 +41,13 @@ INSERT INTO Student VALUES (8,'H','');
 INSERT INTO Student VALUES (9,'I','');
 INSERT INTO Student VALUES (10,'J','');
 INSERT INTO Student VALUES (11,'K','');
-INSERT INTO Student VALUES (12,'L','');
-INSERT INTO Student VALUES (13,'M','');
+INSERT INTO Student VALUES (12,'L','CS');
+INSERT INTO Student VALUES (13,'M','CS');
+INSERT INTO Student VALUES (14,'M','CS');
+INSERT INTO Student VALUES (15,'O','CS');
+INSERT INTO Student VALUES (16,'P','CS');
+INSERT INTO Student VALUES (17,'P','CS');
+INSERT INTO Student VALUES (18,'P','CS');
 
 INSERT INTO Project VALUES (1,'P1');
 INSERT INTO Project VALUES (2,'P2');
@@ -143,3 +148,29 @@ INSERT INTO Member VALUES (3,4);
 -- student 3,5,6 doesn't take same course as 2
 -- 2,3 in different project, 5 no project, 6 no project
 --q4 should return (2,4) (2,8) (8,9) ...
+
+
+INSERT INTO Enrolled VALUES (12,281); 
+INSERT INTO Enrolled VALUES (12,482); 
+
+INSERT INTO Enrolled VALUES (13,280);
+INSERT INTO Enrolled VALUES (13,486);
+
+INSERT INTO Enrolled VALUES (14,280);
+INSERT INTO Enrolled VALUES (14,281);
+INSERT INTO Enrolled VALUES (14,483);
+INSERT INTO Enrolled VALUES (14,486);
+
+INSERT INTO Enrolled VALUES (15,484);
+INSERT INTO Enrolled VALUES (15,485);
+
+INSERT INTO Enrolled VALUES (16,484);
+
+INSERT INTO Enrolled VALUES (17,482);
+INSERT INTO Enrolled VALUES (17,484);
+INSERT INTO Enrolled VALUES (17,485);
+
+INSERT INTO Enrolled VALUES (18,483);
+-- q3 non_heavy_cs are 280 281 483 486
+-- set number of non-cs student >3 
+-- q3 should return 12,13,14,18
