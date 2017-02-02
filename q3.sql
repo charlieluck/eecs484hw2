@@ -27,7 +27,7 @@ WHERE S1.sid = E1.sid AND S1.major = 'CS'
 GROUP BY E.cid
 HAVING COUNT(*) > 100;
 
---SELECT * FROM Non_heavy_cs_course;
+SELECT * FROM Non_heavy_cs_course;
 
 SELECT DISTINCT S.sid,S.name
 FROM Student S, Enrolled E, Non_heavy_cs_course N 
