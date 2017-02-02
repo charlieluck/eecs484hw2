@@ -1,7 +1,7 @@
 CREATE TABLE Student (
        sid integer PRIMARY KEY, 
        name VARCHAR(20),
-       majors VARCHAR(20)
+       major VARCHAR(20)
 );
 
 CREATE TABLE Project (
