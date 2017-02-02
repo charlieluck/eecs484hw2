@@ -22,7 +22,7 @@ FROM Student S, Enrolled E
 WHERE S.sid = E.sid AND S.sid NOT IN
 (SELECT DISTINCT E1.cid
 FROM Student S1, Enrolled E1
-WHERE S1.sid = E.sid AND S.major = 'CS'
+WHERE S1.sid = E1.sid AND S1.major = 'CS'
 )
 GROUP BY E.cid
 HAVING COUNT(*) > 2;
@@ -34,3 +34,5 @@ FROM Student S, Enrolled E, Non_heavy_cs_course N
 WHERE S.sid = E.sid AND E.cid = N.cid 
 AND S.major ='CS'
 ORDER BY S.name DESC;
+
+DROP VIEW Non_heavy_cs_course;
