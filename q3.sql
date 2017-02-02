@@ -20,12 +20,12 @@ CREATE VIEW Non_heavy_cs_course as
 SELECT DISTINCT E.cid 
 FROM Student S, Enrolled E
 WHERE S.sid = E.sid AND S.sid NOT IN
-(SELECT DISTINCT E1.cid
+(SELECT DISTINCT E1.sid
 FROM Student S1, Enrolled E1
 WHERE S1.sid = E1.sid AND S1.major = 'CS'
 )
 GROUP BY E.cid
-HAVING COUNT(*) > 4;
+HAVING COUNT(*) > 100;
 
 SELECT * FROM Non_heavy_cs_course;
 

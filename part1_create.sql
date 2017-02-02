@@ -171,6 +171,6 @@ INSERT INTO Enrolled VALUES (17,484);
 INSERT INTO Enrolled VALUES (17,485);
 
 INSERT INTO Enrolled VALUES (18,483);
--- q3 non_heavy_cs are 280 281 483 486
+-- q3 non_heavy_cs are 482 484 and 485 (NOT TRUE LOL)
 -- set number of non-cs student >3 
--- q3 should return 12,13,14,18
+-- q3 should return 12,15,16,17
