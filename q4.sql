@@ -7,4 +7,4 @@ WHERE NOT EXISTS (SELECT * FROM MEMBER M1, MEMBER M2
 		S1.sid = E1.sid AND S2.sid = E2.sid AND E1.cid = E2.cid AND S1.sid < S2.sid;
 --ORDER BY sid1, sid2;
 
-DROP VIEW StudentPairs;
+--DROP VIEW StudentPairs;
